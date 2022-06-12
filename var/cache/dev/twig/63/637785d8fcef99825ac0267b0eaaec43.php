@@ -898,6 +898,6 @@ class __TwigTemplate_61bd62dca54ed2ba3d8b53363e1f9fa3 extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "/Users/daan/coding/PHP/local_yee/vendor/symfony/web-profiler-bundle/Resources/views/Collector/translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "/Users/daan/coding/PHP/LocalYee/vendor/symfony/web-profiler-bundle/Resources/views/Collector/translation.html.twig");
     }
 }

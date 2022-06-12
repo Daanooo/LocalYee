@@ -975,6 +975,6 @@ class Theme {
         return hash >>> 0;
     }
 }
-", "@WebProfiler/Collector/time.js", "/Users/daan/coding/PHP/local_yee/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.js");
+", "@WebProfiler/Collector/time.js", "/Users/daan/coding/PHP/LocalYee/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.js");
     }
 }

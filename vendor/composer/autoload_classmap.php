@@ -6,7 +6,10 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\DeviceController' => $baseDir . '/src/Controller/DeviceController.php',
+    'App\\Entity\\Device' => $baseDir . '/src/Entity/Device.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Repository\\DeviceRepository' => $baseDir . '/src/Repository/DeviceRepository.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

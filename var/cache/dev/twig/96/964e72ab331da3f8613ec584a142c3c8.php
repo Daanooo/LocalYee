@@ -645,6 +645,6 @@ class __TwigTemplate_8eea2c2728392f33931c63e5b8f3d515 extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/notifier.html.twig", "/Users/daan/coding/PHP/local_yee/vendor/symfony/web-profiler-bundle/Resources/views/Collector/notifier.html.twig");
+", "@WebProfiler/Collector/notifier.html.twig", "/Users/daan/coding/PHP/LocalYee/vendor/symfony/web-profiler-bundle/Resources/views/Collector/notifier.html.twig");
     }
 }

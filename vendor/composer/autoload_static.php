@@ -582,7 +582,10 @@ class ComposerStaticInit3ad3f5ec7ff949d67f772c35970790e8
     );
 
     public static $classMap = array (
+        'App\\Controller\\DeviceController' => __DIR__ . '/../..' . '/src/Controller/DeviceController.php',
+        'App\\Entity\\Device' => __DIR__ . '/../..' . '/src/Entity/Device.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\DeviceRepository' => __DIR__ . '/../..' . '/src/Repository/DeviceRepository.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

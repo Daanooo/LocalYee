@@ -413,6 +413,6 @@ class __TwigTemplate_ac0f88b6ae5b613db57a6f88d38617c5 extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/Users/daan/coding/PHP/local_yee/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/Users/daan/coding/PHP/LocalYee/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

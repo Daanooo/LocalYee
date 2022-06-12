@@ -65,11 +65,29 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
         // line 15
         echo "    </head>
     <body>
+        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+            <span class=\"navbar-brand\">LocalYee</span>
+            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+            </button>
+            <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                <ul class=\"navbar-nav\">
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
+        // line 25
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("devices");
+        echo "\">Devices</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         ";
-        // line 17
+        // line 31
         $this->displayBlock('body', $context, $blocks);
-        // line 18
-        echo "    </body>
+        // line 32
+        echo "
+    </body>
 </html>
 ";
         
@@ -90,7 +108,6 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -145,7 +162,7 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
 
     }
 
-    // line 17
+    // line 31
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -168,9 +185,14 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  149 => 17,  136 => 13,  126 => 12,  113 => 9,  103 => 8,  84 => 5,  72 => 18,  70 => 17,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
+        return array (  166 => 31,  153 => 13,  143 => 12,  130 => 9,  120 => 8,  102 => 5,  89 => 32,  87 => 31,  78 => 25,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -179,7 +201,7 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
 <html>
     <head>
         <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
@@ -191,9 +213,24 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
         {% endblock %}
     </head>
     <body>
+        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+            <span class=\"navbar-brand\">LocalYee</span>
+            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+            </button>
+            <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                <ul class=\"navbar-nav\">
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{path('devices')}}\">Devices</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         {% block body %}{% endblock %}
+
     </body>
 </html>
-", "base.html.twig", "/Users/daan/coding/PHP/local_yee/templates/base.html.twig");
+", "base.html.twig", "/Users/daan/coding/PHP/LocalYee/templates/base.html.twig");
     }
 }

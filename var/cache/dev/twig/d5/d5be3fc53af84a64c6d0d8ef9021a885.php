@@ -171,6 +171,6 @@ class __TwigTemplate_2e8d1c99bb68f58dab916554b5b14ec7 extends Template
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/Users/daan/coding/PHP/local_yee/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/Users/daan/coding/PHP/LocalYee/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

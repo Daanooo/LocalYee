@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        {% for device in devices %}
+            <p>{{device.name}}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
