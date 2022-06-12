@@ -54,7 +54,7 @@ class __TwigTemplate_ad65176cbfa8e9f6ee34949415331bd2 extends Template
 
     }
 
-    // line 3
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -64,25 +64,64 @@ class __TwigTemplate_ad65176cbfa8e9f6ee34949415331bd2 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
-        echo "    <div class=\"container\">
-        ";
         // line 5
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["devices"]) || array_key_exists("devices", $context) ? $context["devices"] : (function () { throw new RuntimeError('Variable "devices" does not exist.', 5, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["device"]) {
-            // line 6
-            echo "            <p>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["device"], "name", [], "any", false, false, false, 6), "html", null, true);
-            echo "</p>
-        ";
+        echo "\t<div class=\"container\">
+\t\t<table class=\"table mt-2\">
+\t\t\t<thead>
+\t\t\t\t<tr>
+\t\t\t\t\t<th>Name</th>
+\t\t\t\t\t<th>Location</th>
+\t\t\t\t\t<th>Hostname</th>
+\t\t\t\t\t<th>Port</th>
+\t\t\t\t</tr>
+\t\t\t</thead>
+\t\t\t<tbody>
+\t\t\t\t";
+        // line 16
+        if ((twig_length_filter($this->env, (isset($context["devices"]) || array_key_exists("devices", $context) ? $context["devices"] : (function () { throw new RuntimeError('Variable "devices" does not exist.', 16, $this->source); })())) > 0)) {
+            // line 17
+            echo "\t\t\t\t\t";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["devices"]) || array_key_exists("devices", $context) ? $context["devices"] : (function () { throw new RuntimeError('Variable "devices" does not exist.', 17, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["device"]) {
+                // line 18
+                echo "\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t<td>";
+                // line 19
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["device"], "name", [], "any", false, false, false, 19), "html", null, true);
+                echo "</td>
+\t\t\t\t\t\t\t<td>";
+                // line 20
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["device"], "location", [], "any", false, false, false, 20), "html", null, true);
+                echo "</td>
+\t\t\t\t\t\t\t<td>";
+                // line 21
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["device"], "hostname", [], "any", false, false, false, 21), "html", null, true);
+                echo "</td>
+\t\t\t\t\t\t\t<td>";
+                // line 22
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["device"], "port", [], "any", false, false, false, 22), "html", null, true);
+                echo "</td>
+\t\t\t\t\t\t</tr>
+\t\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['device'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 25
+            echo "\t\t\t\t";
+        } else {
+            // line 26
+            echo "\t\t\t\t\t<tr>
+\t\t\t\t\t\t<td>No devices</td>
+\t\t\t\t\t</tr>
+\t\t\t\t";
         }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['device'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 8
-        echo "    </div>
-";
+        // line 30
+        echo "\t\t\t</tbody>
+\t\t</tbody>
+\t</table>
+</div>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -103,19 +142,44 @@ class __TwigTemplate_ad65176cbfa8e9f6ee34949415331bd2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  84 => 8,  75 => 6,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  121 => 30,  115 => 26,  112 => 25,  103 => 22,  99 => 21,  95 => 20,  91 => 19,  88 => 18,  83 => 17,  81 => 16,  68 => 5,  58 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
+
 {% block body %}
-    <div class=\"container\">
-        {% for device in devices %}
-            <p>{{device.name}}</p>
-        {% endfor %}
-    </div>
-{% endblock %}", "device/index.html.twig", "/Users/daan/coding/PHP/LocalYee/templates/device/index.html.twig");
+\t<div class=\"container\">
+\t\t<table class=\"table mt-2\">
+\t\t\t<thead>
+\t\t\t\t<tr>
+\t\t\t\t\t<th>Name</th>
+\t\t\t\t\t<th>Location</th>
+\t\t\t\t\t<th>Hostname</th>
+\t\t\t\t\t<th>Port</th>
+\t\t\t\t</tr>
+\t\t\t</thead>
+\t\t\t<tbody>
+\t\t\t\t{% if devices|length > 0 %}
+\t\t\t\t\t{% for device in devices %}
+\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t<td>{{device.name}}</td>
+\t\t\t\t\t\t\t<td>{{device.location}}</td>
+\t\t\t\t\t\t\t<td>{{device.hostname}}</td>
+\t\t\t\t\t\t\t<td>{{device.port}}</td>
+\t\t\t\t\t\t</tr>
+\t\t\t\t\t{% endfor %}
+\t\t\t\t{% else %}
+\t\t\t\t\t<tr>
+\t\t\t\t\t\t<td>No devices</td>
+\t\t\t\t\t</tr>
+\t\t\t\t{% endif %}
+\t\t\t</tbody>
+\t\t</tbody>
+\t</table>
+</div>{% endblock %}
+", "device/index.html.twig", "/Users/daan/coding/PHP/LocalYee/templates/device/index.html.twig");
     }
 }

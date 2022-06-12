@@ -20,7 +20,7 @@ class Device
     private $location;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $ip_address;
+    private $hostname;
 
     #[ORM\Column(type: 'integer')]
     private $port;
@@ -54,14 +54,14 @@ class Device
         return $this;
     }
 
-    public function getIpAddress(): ?string
+    public function getHostname(): ?string
     {
-        return $this->ip_address;
+        return $this->hostname;
     }
 
-    public function setIpAddress(string $ip_address): self
+    public function setHostname(string $hostname): self
     {
-        $this->ip_address = $ip_address;
+        $this->hostname = $hostname;
 
         return $this;
     }

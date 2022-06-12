@@ -1,9 +1,33 @@
 {% extends 'base.html.twig' %}
 
+
 {% block body %}
-    <div class="container">
-        {% for device in devices %}
-            <p>{{device.name}}</p>
-        {% endfor %}
-    </div>
-{% endblock %}
+	<div class="container">
+		<table class="table mt-2">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Location</th>
+					<th>Hostname</th>
+					<th>Port</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% if devices|length > 0 %}
+					{% for device in devices %}
+						<tr>
+							<td>{{device.name}}</td>
+							<td>{{device.location}}</td>
+							<td>{{device.hostname}}</td>
+							<td>{{device.port}}</td>
+						</tr>
+					{% endfor %}
+				{% else %}
+					<tr>
+						<td>No devices</td>
+					</tr>
+				{% endif %}
+			</tbody>
+		</tbody>
+	</table>
+</div>{% endblock %}
