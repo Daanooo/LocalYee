@@ -17,6 +17,12 @@ Via the web interface you can control your device to perform various action, thi
 - Changing the color of the lights (or temperature in case of a white-only bulb)
 - *More to be added...*
 
+### Create scenes
+You can create scenes and add any combination of your added devices to this.
+- You can add as many devices as you like to the scene
+- Set light options for each device in the scene
+- Turning on a scene will turn on all of the added devices
+
 &nbsp;
 
 ## Used technologies
