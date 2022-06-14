@@ -2,6 +2,14 @@
 
 
 {% block body %}
+
+	{# TODO: Make the flash message dismissable #}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+
 	<div class="container">
 		<table class="table mt-2">
 			<thead>
@@ -30,4 +38,7 @@
 			</tbody>
 		</tbody>
 	</table>
+
+	<a href="{{path('smellpp')}}" class="btn btn-primary" role="button">Add new device</a>
+
 </div>{% endblock %}

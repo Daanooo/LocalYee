@@ -12,6 +12,7 @@ import './styles/global.css';
 import './bootstrap';
 
 require('bootstrap');
+
 jQuery(function () {
     $('[data-toggle="popover"]').popover();
 });
