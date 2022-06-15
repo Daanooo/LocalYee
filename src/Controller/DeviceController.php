@@ -12,7 +12,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DeviceController extends AbstractController
 {
-
     #[Route('/', name: 'devices', methods: ['GET'])]
     public function index(ManagerRegistry $doctrine): Response
     {

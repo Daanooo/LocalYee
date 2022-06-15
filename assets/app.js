@@ -11,10 +11,4 @@ import './styles/global.css';
 // start the Stimulus application
 import './bootstrap';
 
-require('bootstrap');
-
-jQuery(function () {
-    $('[data-toggle="popover"]').popover();
-});
-
 

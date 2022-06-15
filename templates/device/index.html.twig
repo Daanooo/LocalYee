@@ -3,10 +3,12 @@
 
 {% block body %}
 
-	{# TODO: Make the flash message dismissable #}
     {% for message in app.flashes('success') %}
         <div class="alert alert-success" role="alert">
             {{ message }}
+			<button type="button" class="alert-dismiss">
+    			<span aria-hidden="true">&times;</span>
+  			</button>
         </div>
     {% endfor %}
 
@@ -42,3 +44,7 @@
 	<a href="{{path('smellpp')}}" class="btn btn-primary" role="button">Add new device</a>
 
 </div>{% endblock %}
+
+{% block scripts %}
+	<script src="{{ asset('js/functionality.js') }}
+{% endblock %}
