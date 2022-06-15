@@ -59,4 +59,21 @@ class DeviceController extends AbstractController
             'form' => $form,
         ]);
     }
+
+    #[Route('/device/delete/{id}', name: 'deleteDevice')]
+    public function delete(ManagerRegistry $doctrine, int $id): Response
+    {
+        $entityManager = $doctrine->getManager();
+        $device = $doctrine->getRepository(Device::class)->find($id);
+
+        if (!$device) {
+            return $this->createNotFoundException('Device not found.');
+        }
+
+        $entityManager->remove($device);
+        $entityManager->flush();
+
+        $this->addFlash('success', 'Device has been deleted');
+        return $this->redirectToRoute('devices');
+    }
 }

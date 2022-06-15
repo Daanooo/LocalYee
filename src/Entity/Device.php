@@ -4,8 +4,13 @@ namespace App\Entity;
 
 use App\Repository\DeviceRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 #[ORM\Entity(repositoryClass: DeviceRepository::class)]
+#[UniqueEntity(
+    fields: ['port', 'hostname'],
+    message: 'The combination of hostname and port is already used'
+)]
 class Device
 {
     #[ORM\Id]
