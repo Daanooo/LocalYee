@@ -23,17 +23,28 @@ class DeviceController extends AbstractController
         );
     }
 
-    #[Route('/device/{id}', methods: ['GET'])]
-    public function detail(ManagerRegistry $doctrine, int $id): Response
+    #[Route('/device/{id}', methods: ['GET', 'POST'], name: 'getDevice')]
+    public function detail(ManagerRegistry $doctrine, int $id, Request $request): Response
     {
-        $device = $doctrine->getRepository(Device::class)->find($id);
+        $entityManager = $doctrine->getManager();
 
+        $device = $doctrine->getRepository(Device::class)->find($id);
         if (!$device) {
             throw $this->createNotFoundException("That device doesn't exist.");
         }
 
-        //TODO: add a proper detail view in stead of just a basic response
-        return new Response($device->getName());
+        $form = $this->createForm(DeviceType::class, $device);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->flush();
+
+            $this->addFlash('success', 'Device succesfully updated.');
+            return $this->redirectToRoute('devices');
+        }
+
+        return $this->renderForm('device/new.html.twig', [
+            'form' => $form
+        ]);
     }
 
     #[Route('/devices/new', name: 'smellpp')]

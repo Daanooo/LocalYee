@@ -31,7 +31,10 @@
 							<td>{{device.location}}</td>
 							<td>{{device.hostname}}</td>
 							<td>{{device.port}}</td>
-							<td><a href="{{path('deleteDevice', {'id': device.id})}}">Delete</a> <a href="#">Edit</a></td>
+							<td>
+								<a href="{{path('deleteDevice', {'id': device.id})}}">Delete</a> 
+								<a href="{{path('getDevice', {'id': device.id})}}">Edit</a>
+							</td>
 						</tr>
 					{% endfor %}
 				{% else %}
